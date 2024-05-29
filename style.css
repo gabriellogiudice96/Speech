@@ -1,31 +1,36 @@
-*{
+
+
+* {
     margin: 0;
     padding: 0;
-    font-family: "poppins";
+    font-family: "Poppins", sans-serif;
     box-sizing: border-box;
 }
 
-.main{
+body {
+    background: linear-gradient(45deg, #0a0ed4, #38e40d);
+}
+
+.main {
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(45deg, #0a0ed4,#38e40d);
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    padding: 20px;
 }
 
-.main h1{
+.main h1 {
     font-size: 45px;
     font-weight: 500;
     margin-top: -50px;
     margin-bottom: 50px;
 }
 
-
-
-textarea{
-    width: 600px;
+textarea {
+    width: 100%;
+    max-width: 600px;
     height: 250px;
     background: #1e1e24;
     color: #fff;
@@ -36,25 +41,23 @@ textarea{
     border-radius: 10px;
     resize: none;
     margin-bottom: 30px;
-    
-
-
 }
 
-textarea::placeholder{
+textarea::placeholder {
     font-size: 16px;
     color: #dddddd80;
 }
 
-
-.selectores{
-    width: 600px;
+.selectores {
+    width: 100%;
+    max-width: 600px;
     display: flex;
     align-items: center;
     gap: 20px;
+    flex-direction: column;
 }
 
-button{
+button {
     background: #ff2929;
     color: #fff;
     font-size: 16px;
@@ -64,10 +67,12 @@ button{
     outline: 0;
     cursor: pointer;
     align-items: center;
+    margin-top: 10px;
 }
 
-select{
-    flex: 1;
+select {
+    width: 100%;
+    max-width: calc(100% - 20px);
     color: #fff;
     background: #403d84;
     height: 50px;
@@ -77,6 +82,27 @@ select{
     border-radius: 35px;
     appearance: none;
 }
+
+
+@media (min-width: 700px) {
+    .selectores {
+        flex-direction: row;
+    }
+
+
+    button {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 700px) {
+    .main h1 {
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+}
+
+
 
 
 
